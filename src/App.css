@@ -1,0 +1,266 @@
+.app {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search-bar {
+  margin: 20px 0;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-detail {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.video-detail-player {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-detail-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-detail-info {
+  margin-top: 10px;
+}
+
+.video-list {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.video-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.video-item img {
+  width: 120px;
+  height: 90px;
+  margin-right: 10px;
+}
+
+.video-item-details {
+  flex: 1;
+}
+
+.video-item-details h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.video-item-details p {
+  margin: 0;
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.search-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #ff416c;
+}
+
+.search-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: black; /* Default background color when not focused */
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 5px;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+.search-button:before,
+.search-button:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  transition: transform 0.4s ease-in-out;
+  border-radius: 5px;
+}
+
+.search-button:before {
+  top: 0;
+  left: -100%;
+  transform: skewX(45deg);
+  transform-origin: bottom left;
+}
+
+.search-button:after {
+  top: -100%;
+  right: 0;
+  transform: skewX(45deg);
+  transform-origin: top right;
+}
+
+.search-button:hover:before,
+.search-button:focus:before {
+  transform: skewX(45deg) translateX(100%);
+}
+
+.search-button:hover:after,
+.search-button:focus:after {
+  transform: skewX(45deg) translateY(100%);
+}
+
+.search-button:hover,
+.search-button:focus {
+  color: #fff;
+  background-color: rgba(255, 65, 108, 0.8); /* Slightly transparent background */
+}
+
+.search-button:active {
+  color: #fff;
+  background-color: rgba(255, 65, 108, 1); /* Fully opaque background on click */
+}
+
+.search-button:focus-visible {
+  outline: 2px solid #ff416c; /* Focus outline for accessibility */
+}
+
+.search-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.search-button.focused {
+  background-color: rgba(255, 65, 108, 0.8); /* Background color when focused */
+}
+
+/* Footer.css */
+
+.footer {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c); /* Matching header background */
+  color: white;
+  text-align: center;
+  padding: 10px 0; /* Decreased padding for a smaller height */
+  margin-top: 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow to match height */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjusted gap to fit smaller height */
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem; /* Slightly smaller font size */
+  transition: color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8px; /* Reduced padding */
+  overflow: hidden;
+}
+
+.footer-link i {
+  margin-right: 5px;
+  font-size: 1.2rem; /* Slightly smaller icon size */
+}
+
+.footer-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Subtle underline effect */
+  transition: left 0.4s ease;
+}
+
+.footer-link:hover::before {
+  left: 100%;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-text {
+  margin-top: 5px; /* Adjusted margin for smaller height */
+  font-size: 0.9rem; /* Smaller font size */
+  font-weight: 300;
+  opacity: 0.8;
+}
+
